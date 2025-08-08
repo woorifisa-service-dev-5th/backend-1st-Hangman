@@ -1,9 +1,0 @@
-package hangman;
-
-import java.util.HashMap;
-
-public class WordProvider {
-	
-	HashMap<String,String> category = new  HashMap<String,String> ();
-
-}
