@@ -1,0 +1,11 @@
+package hangman;
+
+public class InputHandler {
+	
+	public char[] guessedLetters;
+	
+	public char inputLetter() {
+		
+	}
+
+}

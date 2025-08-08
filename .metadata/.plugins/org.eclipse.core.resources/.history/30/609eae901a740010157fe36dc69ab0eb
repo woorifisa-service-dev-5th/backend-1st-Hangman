@@ -1,0 +1,15 @@
+package hangman;
+
+import service.cloud.Console;
+
+public class InputHandler {
+	
+	public char[] guessedLetters;
+	
+	public char inputLetter() {
+		
+		
+		
+	}
+
+}

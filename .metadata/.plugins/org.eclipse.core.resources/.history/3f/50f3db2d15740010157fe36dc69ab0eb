@@ -1,0 +1,10 @@
+package hangman;
+
+import java.util.HashMap;
+
+public class WordProvider {
+	
+	HashMap<Integer,String> category = new  HashMap<Integer,String> ();
+	
+	public String getRandomWord(int )
+}

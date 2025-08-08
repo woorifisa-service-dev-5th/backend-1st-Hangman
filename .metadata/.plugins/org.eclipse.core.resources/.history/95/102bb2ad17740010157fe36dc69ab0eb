@@ -1,0 +1,45 @@
+package hangman;
+
+import service.cloud.Console;
+
+public class GameController {
+
+	public static void main(String[] args) {
+		
+		// 1. 카테고리 입력 받기	
+		// 2. 입력받은 카테고리를 통해 게임 시작하기
+		HangmanGame game = new HangmanGame(inputCategory());
+		game.start();
+		
+		
+		
+
+	}
+	
+	public static String inputCategory() {
+	    WordProvider wordProvider = new WordProvider();
+	    
+	    // 게임 카테고리 입력 받기
+	    while (true) {
+	        Console.print("게임 카테고리를 선택하세요: 1. 음식 2. 동물 3. 사물 4. 동사 ");
+	        String input = Console.read();
+
+	        try {
+	            int categoryNum = Integer.parseInt(input);
+
+	            
+	            if (categoryNum >= 1 && categoryNum <= 4) {
+	                return wordProvider.getRandomWord(categoryNum);
+	            } else {
+	                Console.print("1부터 4 사이의 숫자를 입력해주세요.");
+	            }
+
+	        } catch (NumberFormatException e) {
+	            Console.print("숫자만 입력 가능합니다. 다시 시도해주세요.");
+	        }
+	    }
+	}
+
+
+
+}
